@@ -24,12 +24,18 @@ console.log(currentCoordionates());
 const spacecraft = {
     receiveMessage: (message) => {
         console.log("Message received: " + message);
+        console.log(this);
     }
-}
+};
+
+spacecraft.receiveMessage("Hello, Commander!");
 
 
 
 /*
 /* Observations:
  * TODO: Explain here.
+
+    * The `this` keyword in arrow functions does not refer to the object that contains the method.
+
  */
